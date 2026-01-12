@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <h2>Criar Conta</h2>
-
-            <form action="https://nelida-tannaitic-darius.ngrok-free.dev/cadastro" method="post">
-                <div class="campo">
-                    <label>Nome Completo</label>
-                    <input type="text" name="nome" placeholder="Digite seu Nome" required>
-                </div>
+            <h2>Acessar Sistema</h2>
+            <form action="https://nelida-tannaitic-darius.ngrok-free.dev" method="post">
                 <div class="campo">
                     <label>E-mail</label>
-                    <input type="text" name="email" placeholder="Digite seu E-mail" required>
+                    <input type="text" name="email" placeholder="Seu E-mail" required>
                 </div>
-                <div class="campo">
+                <div class="campo campo-senha">
                     <label>Senha</label>
-                    <input type="password" name="senha" placeholder="Digite sua senha" required>
+                    <input type="password" name="senha" id="senhaLogin" placeholder="Sua senha" required>
+                    <i class="fa-solid fa-eye icone-olho" onclick="mostrarSenha('senhaLogin', this)"></i>
                 </div>
 
-                <button type="submit" class="button">Cadastrar</button>
+                <button type="submit" class="button">Entrar</button>
             </form>
+            <br>
+            <div style="text-align: center;">
+                <a href="index.html">Não tem uma conta? Crie aqui</a>
+            </div>
         </div>
     </div>
-</body>
+    <script>
+        function mostrarSenha(idInput, icone) {
+            var inputSenha = document.getElementedByID(idInput);
 
+            if (input.type === "password") {
+                input.type = "text";
+                idIcone.classList.remove("fa-eye");
+                idIcone.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                idIcone.classList.remove("fa-eye-slash");
+                idIcone.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
 </html>
