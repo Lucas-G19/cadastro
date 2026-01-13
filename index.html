@@ -37,16 +37,16 @@
     </div>
     <script>
         function mostrarSenha(idInput, icone) {
-            var inputSenha = document.getElementById(idInput);
+            var input = document.getElementById(idInput);
 
             if (input.type === "password") {
                 input.type = "text";
-                idIcone.classList.remove("fa-eye");
-                idIcone.classList.add("f-eye-slash");
+                icone.classList.remove("fa-eye");
+                icone.classList.add("fa-eye-slash");
             } else {
                 input.type = "password";
-                idIcone.classList.remove("fa-eye-slash");
-                idIcone.classList.add("fa-eye");
+                icone.classList.remove("fa-eye-slash");
+                icone.classList.add("fa-eye");
             }
         }
     </script>
